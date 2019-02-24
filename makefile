@@ -1,9 +1,8 @@
 SHELL=/bin/bash
 
-output_latex.pdf : main.tex
-	pdflatex -interaction=nonstopmode main.tex || true
-	rm -f main.aux main.log main.out main.snm
-	rm -f main.toc main.out main.blg main.bbl
+resume.pdf : resume.tex
+	pdflatex -interaction=nonstopmode resume.tex || true
+	rm -f resume.aux resume.log resume.out resume.snm
+	rm -f resume.toc resume.out resume.blg resume.bbl
 	rm -f texput.log
-	mv main.pdf output_latex.pdf
 
