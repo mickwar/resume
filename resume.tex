@@ -1,16 +1,38 @@
 \documentclass[12pt]{article}
 
-\usepackage{hyperref}
+\renewcommand{\familydefault}{\sfdefault}
 
+\usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
     urlcolor=blue,
 }
 
+\usepackage{multirow}
+
+\usepackage[margin=1in]{geometry}
+
+
+\newcommand{\entry}[5]{
+    \textbf{#1}\hfill #3--#4
+
+    \textbf{#2}
+
+    #5
+    }
+
+% alphabetize list?
+% reduce from list to only a couple of bullet points? table of entries?
+% fix up the github
+% multiple resumes? macro? or just git b ranches?
+% make sure the bolds are correct
+
 \begin{document}
 
 \begin{center}
+\begin{Large}
 Mickey Warner
+\end{large}
 \smallskip
 
 Lehi, Utah --- (909) 234-0154 --- \href{mailto:mickey.a.warner@gmail.com}{mickey.a.warner@gmail.com} --- \href{https://www.linkedin.com/in/mickey-warner/}{LinkedIn}
@@ -18,55 +40,67 @@ Lehi, Utah --- (909) 234-0154 --- \href{mailto:mickey.a.warner@gmail.com}{mickey
 
 \hline
 
-WORK
+\bigskip
 
-Data analyst
-Boostability
-May 2018 -- Present
-(Fill in)
+%%%%% EXPERIENCE
+\begin{minipage}[t]{0.2\textwidth}
+    \begin{flushright}
+        EXPERIENCE \vert\ 
+    \end{flushright}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.8\textwidth}
+    \begin{flushleft}
+        \entry{Data analyst}{Boostability}{May 2018}{Present}{(Fill in)}
+        \bigskip
 
-Data science intern
-Lawrence Livermore National Laboratory
-Jun -- Sep 2016
-Collaborated with climate scientists to study rare occurrences of extreme weather found in climate model simulations
+        \entry{Data science intern}{Lawrence Livermore National Laboratory}{Jun}{Sep 2016}{Collaborated with climate scientists to study rare occurrences of extreme weather found in climate model simulations}
+        \bigskip
 
-Data science intern
-Lawrence Livermore National Laboratory
-May -- Sep 2015
-Worked with material scientists in fitting Bayesian hierarchical models to stress-strain curve simulations
+        \entry{Data science intern}{Lawrence Livermore National Laboratory}{May}{Sep 2015}{Worked with material scientists in fitting Bayesian hierarchical models to stress-strain curve simulations}
+    \end{flushleft}
+\end{minipage}
 
-\hline
+\bigskip
 
-EXPERTISE
+%%%%% EXPERTISE
+\begin{minipage}[t]{0.2\textwidth}
+    \begin{flushright}
+        EXPERTISE \vert\ 
+    \end{flushright}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.8\textwidth}
+    \begin{flushleft}
+        \entry{Statistics}{}{}{}{Linear/logistic regression, classification, generalized linear models, multivariate, reliability, survival, clustering, extreme values, time-series, stochastic processes, spatial, probability, Bayesian hierarchical modeling} \\
+        \bigskip
 
-Statistics
-Linear/logistic regression, classification, generalized linear models, multivariate,
-reliability, survival, clustering, extreme values, time-series, stochastic processes,
-spatial, probability, Bayesian hierarchical modeling
+        \entry{Machine Learning}{}{}{}{Neural networks, random forests, gradient boosting, variable selection, cross-validation, regularization, anomaly detection} \\
+        \bigskip
 
-Machine Learning
-Neural networks, random forests, gradient boosting, variable selection, cross-validation, regularization, anomaly detection
+        \entry{Programming}{}{}{}{Python, R, MATLAB, C/C++, Julia, SAS, JMP, JAGS/WinBUGS, Stan} \\
+        \bigskip
 
+        \entry{Other}{}{}{}{Linux, Git, Bash, LaTeX, parallelization, SQL, Docker, AWS (cloud computing), model deployment, Microsoft Office Suite} \\
+    \end{flushleft}
+\end{minipage}
 
-Programming
-Python, R, MATLAB, C/C++, Julia, SAS, JMP, JAGS/WinBUGS, Stan
+\bigskip
 
-Other
-Linux, Git, Bash, LaTeX, parallelization, SQL,
-Docker, AWS (cloud computing), model deployment,
-Microsoft Office Suite
+%%%%% EDUCATION
+\begin{minipage}[t]{0.2\textwidth}
+    \begin{flushright}
+        EDUCATION \vert\ 
+    \end{flushright}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.8\textwidth}
+    \begin{flushleft}
+        \entry{University of California, Santa Cruz}{2015}{2018}{M.S., Statistics and Applied Mathematics} \\
+        \bigskip
 
-\hline
-
-EDUCATION
-
-University of California, Santa Cruz
-2015 -- 2018
-M.S., Statistics and Applied Mathematics
-
-Brigham Young University
-2009 -- 2015
-M.S. / B.S., Statistics, minor in Mathematics
-
+        \entry{Brigham Young University}{2009}{2015}{M.S. / B.S., Statistics, minor in Mathematics}
+    \end{flushleft}
+\end{minipage}
 
 \end{document}
